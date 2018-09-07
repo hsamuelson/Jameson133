@@ -25,4 +25,4 @@ class Person:
 
     def get_timer(self):
         return self._timer
-
+print("ji")
