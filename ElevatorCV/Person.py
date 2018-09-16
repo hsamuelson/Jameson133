@@ -5,8 +5,8 @@ class Person:
         self._end = destination_floor
         self._timer = 0
 
-    def move_one_floor(self):
-        self._timer = self._timer + 5
+    def move_floors(self, floors):
+        self._timer = self._timer + (floors * 5)
 
     def stop_at_floor(self):
         self._timer = self._timer + 10
@@ -23,6 +23,8 @@ class Person:
     def get_end(self):
         return self._end
 
-    def get_timer(self):
+    def get_wait_time(self):
         return self._timer
-print("ji")
+
+    def add_wait_time(self, time):
+        self._timer += time
